@@ -21,7 +21,7 @@ public class BaseTest {
     public void setup() {
         DesiredCapabilities outlookCapabilities = new DesiredCapabilities();
         outlookCapabilities.setCapability(appCap, outlookPath);
-        outlookCapabilities.setCapability(waitAppCap, 5);
+        outlookCapabilities.setCapability(waitAppCap, 11);
         try {
             outlookSession = new WindowsDriver<WindowsElement>(new URL(hubHost), outlookCapabilities);
             outlookFactory = new OutlookFactory(outlookSession);
@@ -45,8 +45,8 @@ public class BaseTest {
         }
     }
 
-    @AfterClass
-    public void tearDown() {
-        outlookSession.quit();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        outlookSession.quit();
+//    }
 }
